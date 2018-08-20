@@ -5,5 +5,124 @@
 // Variables
 // @import "variables";
 
+// 因为我们在上面运行着 npm run watch-poll 命令，watch-poll 任务会监控着 resources 下的文件变更。
+// 当你保存 app.scss 的动作被 watch-poll 命令捕捉到以后，就会触发自动编译功能，
+// 将 .scss 文件编译为 .css 文件，并存放到 public/css 文件夹里。
+
+
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// 上面代码将导入存放在 node_modules/bootstrap-sass/assets/stylesheets/bootstrap 文件夹中的所有样式文件。
+// 你也可以使用下面代码来对单独一个文件进行导入：
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss";
+
+$navbar-color: #3c3e42;
+
+/* universal普遍 */
+
+body {
+  padding-top: 60px;
+} v    
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.jumbotron {
+  text-align: center;
+}
+
+/* typography排版  */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* header顶部视图 */
+
+.navbar-inverse {
+  background-color: $navbar-color;
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
+    color: #fff;
+  }
+}
+
+
+
+/* footer底部视图 */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+
+  a {
+    color: #555;
+  }
+
+  a:hover {
+    color: #222;
+  }
+
+  small {
+    float: left;
+  }
+
+  ul {
+    float: right;
+    list-style: none;
+
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+
+  img.brand-icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  .slogon {
+    font-size: 13px;
+    font-weight: bold;
+  }
+}
