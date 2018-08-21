@@ -18,3 +18,7 @@ Route::get('/about', 'StaticPagesController@about')->name('about');
 Route::get('signup', 'UsersController@create')->name('signup');
 // 因为我们在后面会为注册页面添加上表单注册功能，到时候表单提交请求会与数据库进行交互，
 // 因此该页面并不能算静态页面，也就意味着我们不能再使用 StaticPagesController 来处理此动作
+
+Route::resource('users','UsersController');
+// resource方法将遵从RESTful架构为用户资源生成路由。
+// 该方法接收两个参数，第一个参数为资源名称，第二个参数为控制器名称。
