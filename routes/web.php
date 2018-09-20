@@ -20,11 +20,6 @@ Route::get('signup', 'UsersController@create')->name('signup');
 // 因此该页面并不能算静态页面，也就意味着我们不能再使用 StaticPagesController 来处理此动作
 
 Route::resource('users','UsersController');
-// resource方法将遵从RESTful架构为用户资源生成路由。
-// 该方法接收两个参数，第一个参数为资源名称，第二个参数为控制器名称。
-
-//-------------------------------------------------------//
-Route::resource('sp','SpController');
 // Route::get('/users', 'UsersController@index')->name('users.index');
 // Route::get('/users/create', 'UsersController@create')->name('users.create');
 // Route::get('/users/{user}', 'UsersController@show')->name('users.show');
@@ -32,6 +27,19 @@ Route::resource('sp','SpController');
 // Route::get('/users/{user}/edit', 'UsersController@edit')->name('users.edit');
 // Route::patch('/users/{user}', 'UsersController@update')->name('users.update');
 // Route::delete('/users/{user}', 'UsersController@destroy')->name('users.destroy');
+// 该方法接收两个参数，第一个参数为资源名称，第二个参数为控制器名称。
+
+//-------------------------------------------------------//
+Route::resource('sp','SpController');
+
 Route::get('/getserial','SpController@shuaxin_ser');
 Route::get('/gettem','SpController@shuaxin_tem');
 Route::get('/gethum','SpController@shuaxin_hum');
+
+
+
+
+
+
+
+

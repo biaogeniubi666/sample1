@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>@yield('title', 'Sample IOT') - GZID IOT</title>
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="../css/app.css">
     <script src ="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js">
     </script> 
 {{-- Laravel 在运行时，是以 public 文件夹为根目录的，

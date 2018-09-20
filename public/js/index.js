@@ -118,10 +118,10 @@ $(function() {
         fillColor: "rgba(26, 188, 156,0.2)",
         strokeColor: "#1ABC9C",
         pointColor: "#1ABC9C",
-        pointStrokeColor: "#fff",
+        pointStrokeColor: "#fff",  
         pointHighlightFill: "#fff",
         pointHighlightStroke: "#1ABC9C",
-        data: [65, 59, 80, 81, 56, 55, 40]
+        data: [65, 59, 80, 81, 56, 55, 100]
       }, {
         label: "My Second dataset",
         fillColor: "rgba(34, 167, 240,0.2)",
