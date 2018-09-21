@@ -32,9 +32,13 @@ Route::resource('users','UsersController');
 //-------------------------------------------------------//
 Route::resource('sp','SpController');
 
-Route::get('/getserial','SpController@shuaxin_ser');
+Route::get('/getserial','SpController@shuaxin_serchart'); //shuaxin_ser
 Route::get('/gettem','SpController@shuaxin_tem');
 Route::get('/gethum','SpController@shuaxin_hum');
+
+
+Route::get('/chart','StaticPagesController@chart')->name('chart'); // 表格页面跳转
+Route::get('/getserial_chart','SpController@shuaxin_serchart');  // 表格数据采集
 
 
 

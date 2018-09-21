@@ -20,4 +20,9 @@ class StaticPagesController extends Controller
     {
         return '关于页';
     }
+
+    public function chart()
+    {
+        return view('admin.enchart');
+    }
 }

@@ -31,6 +31,21 @@ class SpController extends Controller
             }
         return "$serialdatas->id";
     }
+
+    public function shuaxin_serchart()
+    {
+        DB::connection()->disableQueryLog(); 
+
+        $serialdatas = DB::table('serialdatas')->pluck('id');
+       
+        $arrlength = count($serialdatas);
+ 
+        return [$serialdatas[$arrlength-1],$serialdatas[$arrlength-2],$serialdatas[$arrlength-3],$serialdatas[$arrlength-4],
+        $serialdatas[$arrlength-5],$serialdatas[$arrlength-6],$serialdatas[$arrlength-7],
+        ];
+    }
+
+
     public function shuaxin_tem()
     {   
         DB::connection()->disableQueryLog(); 
