@@ -29,22 +29,8 @@ class SpController extends Controller
             foreach ($serialdatas as $serialdatas) {
             $serialdatas->id;
             }
-        return "$serialdatas->id";
+        return [$serialdatas->id];
     }
-
-    public function shuaxin_serchart()
-    {
-        DB::connection()->disableQueryLog(); 
-
-        $serialdatas = DB::table('serialdatas')->pluck('id');
-       
-        $arrlength = count($serialdatas);
- 
-        return [$serialdatas[$arrlength-1],$serialdatas[$arrlength-2],$serialdatas[$arrlength-3],$serialdatas[$arrlength-4],
-        $serialdatas[$arrlength-5],$serialdatas[$arrlength-6],$serialdatas[$arrlength-7],
-        ];
-    }
-
 
     public function shuaxin_tem()
     {   
@@ -52,9 +38,9 @@ class SpController extends Controller
         $tems=DB::table('tem_and_hums')->get();   
             
             foreach ($tems as $tems) {
-                echo $tems->tem;
+                $tems->tem;
             }
-        
+        return [$tems->tem];
     }
 
     public function shuaxin_hum()
@@ -63,8 +49,57 @@ class SpController extends Controller
         $hums=DB::table('tem_and_hums')->get();   
             
             foreach ($hums as $hums) {
-                echo $hums->hum;
+                $hums->hum;
             }
+        return [$hums->hum];
+    }
+
+    public function shuaxin_chart()
+    {
+        DB::connection()->disableQueryLog(); 
+
+        $tem_forchart = DB::table('tem_and_hums')->pluck('tem');
+        $hum_forchart = DB::table('tem_and_hums')->pluck('hum');
+       
+        $tem_arrlength = count($tem_forchart);
+        $hum_arrlength = count($hum_forchart);
+ 
+        return [
+            [
+                $tem_forchart[$tem_arrlength-15],
+                $tem_forchart[$tem_arrlength-14],
+                $tem_forchart[$tem_arrlength-13],
+                $tem_forchart[$tem_arrlength-12],
+                $tem_forchart[$tem_arrlength-11],    
+                $tem_forchart[$tem_arrlength-10],   
+                $tem_forchart[$tem_arrlength-9],
+                $tem_forchart[$tem_arrlength-8],
+                $tem_forchart[$tem_arrlength-7],
+                $tem_forchart[$tem_arrlength-6],
+                $tem_forchart[$tem_arrlength-5],
+                $tem_forchart[$tem_arrlength-4],
+                $tem_forchart[$tem_arrlength-3],
+                $tem_forchart[$tem_arrlength-2],
+                $tem_forchart[$tem_arrlength-1]
+            ],
+            [
+                $hum_forchart[$hum_arrlength-15],
+                $hum_forchart[$hum_arrlength-14],
+                $hum_forchart[$hum_arrlength-13],
+                $hum_forchart[$hum_arrlength-12],
+                $hum_forchart[$hum_arrlength-11],    
+                $hum_forchart[$hum_arrlength-10],   
+                $hum_forchart[$hum_arrlength-9],
+                $hum_forchart[$hum_arrlength-8],
+                $hum_forchart[$hum_arrlength-7],
+                $hum_forchart[$hum_arrlength-6],
+                $hum_forchart[$hum_arrlength-5],
+                $hum_forchart[$hum_arrlength-4],
+                $hum_forchart[$hum_arrlength-3],
+                $hum_forchart[$hum_arrlength-2],
+                $hum_forchart[$hum_arrlength-1]
+            ]
+        ];
     }
         
 }
@@ -72,4 +107,6 @@ class SpController extends Controller
         // return response()->json(array('serials'=> $serials),200);
         // json(array('serials'=> $serials));
         
+
+
     

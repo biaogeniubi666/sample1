@@ -4,6 +4,7 @@
 <head>
     <title>GZID Admin V.1 - GZID IOT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
@@ -355,10 +356,19 @@
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div class="card primary">
-                                        <div class="card-jumbotron no-padding">
-                                            <canvas id="jumbotron-line-2-chart" class="chart no-padding">
-                                            </canvas>
-                                        </div>
+                                        {{-- <div class="card-jumbotron no-padding"> --}}
+                                            <div id="main" style="width: 600px;height:400px;"></div>
+                                            <script src="../js/echarts.common.min.js"></script>
+                                            <script src="../js/chalk.js"></script>
+                                                <script>
+                                                    $(function(){
+                                                    initAjax();
+                                                    setInterval(function(){
+                                                        initAjax();
+                                                    }, 1000);
+                                                    }); 
+                                                </script>
+                                        {{-- </div>  --}}
                                         <div class="card-body half-padding">
                                             <h4 class="float-left no-margin font-weight-300">温湿度变化</h4>
                                             <h2 class="float-right no-margin font-weight-300"></h2>
@@ -451,11 +461,14 @@
             <script type="text/javascript" src="../lib/js/ace/ace.js"></script>
             <script type="text/javascript" src="../lib/js/ace/mode-html.js"></script>
             <script type="text/javascript" src="../lib/js/ace/theme-github.js"></script>
-            
+           
             <!-- Javascript -->
             <script type="text/javascript" src="../js/app.js"></script>
             <script type="text/javascript" src="../js/index.js"></script>
             <script type="text/javascript" src="../js/data.js"></script>
+            <script src="../js/echarts.common.min.js"></script>
+            <script src="../js/echart.js"></script>
+            <script src="../js/chalk.js"></script>
 </body>
 
 </html>
