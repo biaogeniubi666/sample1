@@ -387,9 +387,29 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-12">
                                 <div class="card primary">
-                                    <div class="card-jumbotron no-padding">
-                                        <canvas id="jumbotron-bar-chart" class="chart no-padding"></canvas>
-                                    </div>
+                                    <input name="status" type="checkbox" >
+                                        <script type="text/javascript">
+                                            $("[name='status']").bootstrapSwitch({ 
+                                                onText:"照明",         
+                                                offText:"熄灭",        
+                                                onColor:"success",         
+                                                offColor:"info",         
+                                                size:"large",         
+                                                onSwitchChange:function(event,state){             
+                                                    if(state==true){                 
+                                                        $(this).val("1");                 
+                                                        console.log("开启");
+                                                        // 利用控制器处理
+                                                        // $(function(){conctrol_light();
+                                                        // });      
+                                                        }
+                                                    else{                 
+                                                        $(this).val("2");              
+                                                        console.log("关闭");           
+                                                        }         
+                                                    }     
+                                                });
+                                        </script>                          
                                     <div class="card-body half-padding">
                                         <h4 class="float-left no-margin font-weight-300">Orders</h4>
                                         <div class="clear-both"></div>
