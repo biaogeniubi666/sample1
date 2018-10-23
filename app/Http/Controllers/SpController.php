@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Models\Serialmodel;  
 use App\Models\TemAndHum;  
+use App\Models\LightState;  
 // 加上用户模型文件路径，才能找到MODELS
 use Illuminate\Support\Facades\DB;
 
@@ -102,11 +103,24 @@ class SpController extends Controller
         ];
     }
         
-}
+
         // return "$serials->id <br/> $serials->data <br/> $serials->time";
         // return response()->json(array('serials'=> $serials),200);
         // json(array('serials'=> $serials));
+    public function lightup_control()
+    {
+        DB::connection()->disableQueryLog(); 
+        DB::table('light_states')->where('state', '=', 0)->update(['state' => 1]);
         
+    }
+
+    public function lightdown_control()
+    {
+        DB::connection()->disableQueryLog(); 
+        DB::table('light_states')->where('state', '=', 1)->update(['state' => 0]);
+    }
+
+} //这个是最后的括号
 
 
     

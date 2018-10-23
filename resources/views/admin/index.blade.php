@@ -20,10 +20,10 @@
     <!-- CSS App -->
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/themes/flat-blue.css">
-    <!-- Javascript CDN -->
-    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
 
+    <!-- Javascript CDN -->
+    <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../lib/js/bootstrap-switch.min.js"></script>
     <script type="text/javascript" src="../js/data.js"></script>
 
 <body class="flat-blue">
@@ -400,18 +400,20 @@
                                                         $(this).val("1");                 
                                                         console.log("开启");
                                                         // 利用控制器处理
-                                                        // $(function(){conctrol_light();
-                                                        // });      
+                                                        $(function(){lightup_control();
+                                                        });  
                                                         }
                                                     else{                 
                                                         $(this).val("2");              
-                                                        console.log("关闭");           
-                                                        }         
+                                                        console.log("关闭");
+                                                        $(function(){lightdown_control();
+                                                        });                
+                                                        }                                                                
                                                     }     
                                                 });
                                         </script>                          
                                     <div class="card-body half-padding">
-                                        <h4 class="float-left no-margin font-weight-300">Orders</h4>
+                                        <h4 class="float-left no-margin font-weight-300">LED开关</h4>
                                         <div class="clear-both"></div>
                                     </div>
                                 </div>

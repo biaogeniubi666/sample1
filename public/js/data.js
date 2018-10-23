@@ -57,3 +57,39 @@ function  shuaxin_hum()
         },
     });                                                                                                                                         
 }  
+
+function  lightup_control()
+{
+    $.ajax({
+        type: "get",  //数据提交方式（post/get）
+        url: "/getup",  //提交到的url
+        // dataType: "json",//返回的数据类型格式
+        success: function (result) {//result和data没关系
+            console.log(result);//打印服务端返回的数据(调试用)
+            if (result.resultCode == 200) {
+                alert("SUCCESS");
+            };
+        },
+        error : function() {
+            alert("异常！");
+        }
+    });                                                                                                                                         
+}  
+
+function  lightdown_control()
+{
+    $.ajax({
+        type: "get",  //数据提交方式（post/get）
+        url: "/getdown",  //提交到的url
+        // dataType: "json",//返回的数据类型格式
+        success: function (result) {//result和data没关系
+            console.log(result);//打印服务端返回的数据(调试用)
+            if (result.resultCode == 200) {
+                alert("SUCCESS");
+            };
+        },
+        error : function() {
+            alert("异常！");
+        }
+    });                                                                                                                                         
+} 
