@@ -3,6 +3,9 @@
 
 <head>
     <title>GZID Admin V.1 - GZID IOT</title>
+
+    <input type="hidden" name="_token" value="fhcxqT67dNowMoWsAHGGPJOAWJn8x5R5ctSwZrAq">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- Fonts -->

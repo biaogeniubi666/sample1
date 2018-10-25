@@ -15,7 +15,7 @@ Route::get('/', 'StaticPagesController@home')->name('home');
 Route::get('/help', 'StaticPagesController@help')->name('help');
 Route::get('/about', 'StaticPagesController@about')->name('about');
 
-Route::get('signup', 'UsersController@create')->name('signup');
+Route::get('/signup', 'UsersController@create')->name('signup');
 // 因为我们在后面会为注册页面添加上表单注册功能，到时候表单提交请求会与数据库进行交互，
 // 因此该页面并不能算静态页面，也就意味着我们不能再使用 StaticPagesController 来处理此动作
 
@@ -32,15 +32,18 @@ Route::resource('users','UsersController');
 //-------------------------------------------------------//
 Route::resource('sp','SpController');
 
+//显示动态数据和动态表格路由请求
 Route::get('/getserial','SpController@shuaxin_ser'); //shuaxin_ser
 Route::get('/gettem','SpController@shuaxin_tem');
 Route::get('/gethum','SpController@shuaxin_hum');
+Route::get('/gettem_and_hum_chart','SpController@shuaxin_chart');  // 表格数据采集
 
+//开关控制LED灯路由请求
 Route::get('/getup','SpController@lightup_control');
 Route::get('/getdown','SpController@lightdown_control');
 
-Route::get('/chart','StaticPagesController@chart')->name('chart'); // 表格页面跳转
-Route::get('/gettem_and_hum_chart','SpController@shuaxin_chart');  // 表格数据采集
+
+
 
 
 
