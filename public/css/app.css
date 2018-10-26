@@ -8422,6 +8422,14 @@ p {
   color: #fff;
 }
 
+#logout {
+  cursor: default;
+}
+
+#logout:hover {
+  background-color: transparent;
+}
+
 /* footer底部视图 */
 
 footer {
@@ -8527,5 +8535,23 @@ div.img img {
 div.desc {
   padding: 15px;
   text-align: center;
+}
+
+/* forms */
+
+input,
+textarea,
+select,
+.uneditable-input {
+  border: 1px solid #bbb;
+  margin-bottom: 15px;
+}
+
+input {
+  height: auto !important;
+}
+
+.panel {
+  margin-top: 50px;
 }
 
