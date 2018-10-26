@@ -42,7 +42,10 @@ Route::get('/gettem_and_hum_chart','SpController@shuaxin_chart');  // 表格数�
 Route::get('/getup','SpController@lightup_control');
 Route::get('/getdown','SpController@lightdown_control');
 
-
+//第七章会话管理
+Route::get('login', 'SessionsController@create')->name('login');
+Route::post('login', 'SessionsController@store')->name('login');
+Route::delete('logout', 'SessionsController@destroy')->name('logout');
 
 
 

@@ -87,6 +87,12 @@ p {
   }
 }
 
+#logout {
+  cursor: default;
+  &:hover {
+    background-color: transparent;
+  }
+}
 
 
 /* footer底部视图 */
