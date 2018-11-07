@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>@yield('title', 'Sample IOT') - GZID IOT</title>
-    <link rel="stylesheet" href="/css/app.css">
-    <script src ="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script> 
-      {{-- Laravel 在运行时，是以 public 文件夹为根目录的，
-      因此我们可以使用下面这行代码来为 Laravel 引入样式，
-      上面代码将引入 public/css/app.css 样式文件。 --}}
+      <title>GZID Admin V.1 - GZID IOT666</title>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <!-- Fonts -->
+      <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+      <!-- CSS Libs -->
+      <link rel="stylesheet" type="text/css" href="../lib/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="../lib/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="../lib/css/animate.min.css">
+      <link rel="stylesheet" type="text/css" href="../lib/css/bootstrap-switch.min.css">
+      <link rel="stylesheet" type="text/css" href="../lib/css/checkbox3.min.css">
+      <link rel="stylesheet" type="text/css" href="../lib/css/jquery.dataTables.min.css">
+      <link rel="stylesheet" type="text/css" href="../lib/css/dataTables.bootstrap.css">
+      <link rel="stylesheet" type="text/css" href="../lib/css/select2.min.css">
+      <!-- CSS App -->
+      <link rel="stylesheet" type="text/css" href="../css/style.css">
+      <link rel="stylesheet" type="text/css" href="../css/themes/flat-blue.css">
+
+      <!-- Javascript CDN -->
+      <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
+      <script type="text/javascript" src="../lib/js/bootstrap-switch.min.js"></script>
+      <script type="text/javascript" src="../js/data.js"></script>
   </head>
     <body>
       @include('layout._header')
