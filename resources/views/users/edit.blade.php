@@ -1,4 +1,4 @@
-@extends('layout.default')
+@extends('layout.default1')
 @section('title', '更新个人资料')
 {{-- 对应default视图里的@yield('title', 'Sample IOT')  --}}
 

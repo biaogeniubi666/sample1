@@ -1,4 +1,4 @@
-@extends('layout.default')
+@extends('layout.default1')
 {{-- 包含网页整体框架结构的通用视图，以及标签、css和js脚本引入等 --}}
 @section('title', '登录')
 
