@@ -8350,13 +8350,13 @@ button.close {
   }
 }
 
-/* universal普遍 */
+/* universal普遍 
 
 body {
-  padding-top: 60px;
-}
+  padding-top: 70px;
+} 
 
-v section {
+section {
   overflow: auto;
 }
 
@@ -8367,6 +8367,8 @@ textarea {
 .jumbotron {
   text-align: center;
 }
+
+*/
 
 /* typography排版  */
 
@@ -8401,10 +8403,10 @@ p {
   text-align: center;
 }
 
-/* header顶部视图 */
+/* header顶部视图
 
 .navbar-inverse {
-  background-color: #3c3e42;
+  background-color: $navbar-color;
 }
 
 #logo {
@@ -8416,95 +8418,92 @@ p {
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
-}
-
-#logo:hover {
-  color: #fff;
+  &:hover {
+    color: #fff;
+  }
 }
 
 #logout {
   cursor: default;
+  &:hover {
+    background-color: transparent;
+  }
 }
+ */
 
-#logout:hover {
-  background-color: transparent;
-}
-
-/* footer底部视图 */
+/* footer底部视图
 
 footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #777;
+
+  a {
+    color: #555;
+  }
+
+  a:hover {
+    color: #222;
+  }
+
+  small {
+    float: left;
+  }
+
+  ul {
+    float: right;
+    list-style: none;
+
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+
+  img.brand-icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  .slogon {
+    font-size: 13px;
+    font-weight: bold;
+  }
 }
+ */
 
-footer a {
-  color: #555;
-}
-
-footer a:hover {
-  color: #222;
-}
-
-footer small {
-  float: left;
-}
-
-footer ul {
-  float: right;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 15px;
-}
-
-footer img.brand-icon {
-  width: 17px;
-  height: 17px;
-}
-
-footer .slogon {
-  font-size: 13px;
-  font-weight: bold;
-}
-
-/* sidebar */
-
-aside section {
-  padding: 10px 0;
-  margin-top: 20px;
-}
-
-aside section:first-child {
-  border: 0;
-  padding-top: 0;
-}
-
-aside section span {
-  display: block;
-  margin-bottom: 3px;
-  line-height: 1;
+/* sidebar 
+aside {
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+  }
 }
 
 section.user_info {
   padding-bottom: 10px;
   margin-top: 20px;
   text-align: center;
-}
-
-section.user_info .gravatar {
-  float: none;
-  max-width: 70px;
-}
-
-section.user_info h1 {
-  font-size: 1.4em;
-  letter-spacing: -1px;
-  margin-bottom: 3px;
-  margin-top: 15px;
+  .gravatar {
+    float: none;
+    max-width: 70px;
+  }
+  h1 {
+    font-size: 1.4em;
+    letter-spacing: -1px;
+    margin-bottom: 3px;
+    margin-top: 15px;
+  }
 }
 
 .gravatar {
@@ -8513,6 +8512,7 @@ section.user_info h1 {
   max-width: 50px;
   border-radius: 50%;
 }
+*/
 
 /* serialmodel */
 

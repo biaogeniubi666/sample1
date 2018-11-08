@@ -9,9 +9,9 @@ use Illuminate\Http\Request;
 // UsersController 包含用户的注册、用户个人中心、已登录用户信息修改等相关业务内容
 class UsersController extends Controller
 {
-    public function create()  // 注册界面跳转
+    public function signup()  // 注册界面跳转
     {
-        return view('users.create');
+        return view('users.signup');
     }
 
     public function show(User $user) //用户个人中心页面跳转
@@ -91,7 +91,7 @@ class UsersController extends Controller
     public function __construct()   //在用户的注册、用户个人中心、已登录用户信息修改中使用
     {
         $this->middleware('auth', [     //构建中间件‘auth’，并定义相应的动作，用于其他方法中       
-            'except' => ['show', 'create', 'store', 'index']
+            'except' => ['show', 'signup', 'store', 'index']
         ]);
         // Laravel 提供身份验证（Auth）中间件来过滤未登录用户的 edit, update 动作。
         // __construct()是PHP的构造器方法，用于创建一个类对象，类似于PYTHON的类。

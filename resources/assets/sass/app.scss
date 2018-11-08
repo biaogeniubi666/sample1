@@ -19,11 +19,11 @@
 
 $navbar-color: #3c3e42;
 
-/* universal普遍 */
+/* universal普遍 
 
 body {
-  padding-top: 60px;
-} v    
+  padding-top: 70px;
+} 
 
 section {
   overflow: auto;
@@ -36,6 +36,8 @@ textarea {
 .jumbotron {
   text-align: center;
 }
+
+*/
 
 /* typography排版  */
 
@@ -67,7 +69,7 @@ p {
 }
 
 
-/* header顶部视图 */
+/* header顶部视图
 
 .navbar-inverse {
   background-color: $navbar-color;
@@ -93,9 +95,9 @@ p {
     background-color: transparent;
   }
 }
+ */
 
-
-/* footer底部视图 */
+/* footer底部视图
 
 footer {
   margin-top: 45px;
@@ -135,10 +137,10 @@ footer {
     font-weight: bold;
   }
 }
+ */
 
 
-/* sidebar */
-
+/* sidebar 
 aside {
   section {
     padding: 10px 0;
@@ -177,6 +179,7 @@ section.user_info {
   max-width: 50px;
   border-radius: 50%;
 }
+*/
 
 /* serialmodel */
 div.img {

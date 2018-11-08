@@ -7,9 +7,9 @@ use Auth;
 
 class SessionsController extends Controller
 {
-    public function create()   // 登录页面跳转
+    public function login()   // 登录页面跳转
     {
-        return view('sessions.create');
+        return view('sessions.login');
     }
 
     public function store(Request $request) //登录信息验证和处理
@@ -48,7 +48,7 @@ class SessionsController extends Controller
     public function __construct() //登录动作create()只允许未登录用户使用，注册动作限制在另一个控制器内
     {
         $this->middleware('guest', [
-            'only' => ['create']
+            'only' => ['login']
         ]);
     }
 }

@@ -15,10 +15,9 @@ Route::get('/', 'StaticPagesController@home')->name('home');
 Route::get('/help', 'StaticPagesController@help')->name('help');
 Route::get('/about', 'StaticPagesController@about')->name('about');
 
-Route::get('/signup', 'UsersController@create')->name('signup');
-// 因为我们在后面会为注册页面添加上表单注册功能，到时候表单提交请求会与数据库进行交互，
-// 因此该页面并不能算静态页面，也就意味着我们不能再使用 StaticPagesController 来处理此动作
 
+
+//用户管理路由
 Route::resource('users','UsersController');
 // Route::get('/users', 'UsersController@index')->name('users.index');
 // Route::get('/users/create', 'UsersController@create')->name('users.create');
@@ -43,9 +42,10 @@ Route::get('/getup','SpController@lightup_control');
 Route::get('/getdown','SpController@lightdown_control');
 
 //第七章会话管理
-Route::get('login', 'SessionsController@create')->name('login');
-Route::post('login', 'SessionsController@store')->name('login');
-Route::delete('logout', 'SessionsController@destroy')->name('logout');
+Route::get('/signup', 'UsersController@signup')->name('signup'); //注册
+Route::get('login', 'SessionsController@login')->name('login'); //登录
+Route::post('login', 'SessionsController@store')->name('login'); //登录信息发送
+Route::delete('logout', 'SessionsController@destroy')->name('logout'); //退出登录
 
 
 
