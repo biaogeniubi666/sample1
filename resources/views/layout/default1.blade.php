@@ -28,11 +28,11 @@
     <body class="flat-blue">
         <div class="app-container">
                 <div class="row content-container">
-                    @include('shared._messages')
-                    @include('layout._navbar')
-                    @include('layout._sidebar')
-                    @yield('content')
-                    @include('layout._footer1')
+                    @include('shared._messages')<!-- 信息提示-->
+                    @include('layout._navbar')<!-- 头部导航栏-->
+                    @include('layout._sidebar')<!-- 左侧导航栏-->
+                    @yield('content')<!-- 页面主内容-->
+                    @include('layout._footer1')<!-- 页脚-->
                     <div>
                         <!-- Javascript Libs -->
                         <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -56,6 +56,6 @@
                         <script src="../js/echarts.common.min.js"></script>
                         <script src="../js/echart.js"></script>
                         <script src="../js/chalk.js"></script>
-                    </div>
+                    </div><!-- JS文件导入-->
     </body>	    				
 </html>

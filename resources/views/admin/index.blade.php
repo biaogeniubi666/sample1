@@ -4,9 +4,9 @@
 @section('content')
 
 
-        {{--以上是上方导航栏  --}}
+        {{--上方导航栏  --}}
 
-        {{-- 以下是左侧导航栏容 --}}
+        {{-- 左侧导航栏容 --}}
              
         <!-- Main Content -->
         <div class="container-fluid">
