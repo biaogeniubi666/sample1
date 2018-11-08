@@ -2,6 +2,7 @@
 @section('title', '主页1')
 
 @section('content')
+
 <div class="row content-container">
         <nav class="navbar navbar-default navbar-fixed-top navbar-top">
             <div class="container-fluid">
@@ -10,7 +11,7 @@
                         <i class="fa fa-bars icon"></i>
                     </button>
                     <ol class="breadcrumb navbar-breadcrumb">
-                        <li class="active">控制台</li>
+                        <li class="active">Dashboard</li>
                     </ol>
                     <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
                         <i class="fa fa-th icon"></i>
@@ -64,15 +65,15 @@
                         </ul>
                     </li>
                     <li class="dropdown profile">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Emily Hart <span class="caret"></span></a>
                         <ul class="dropdown-menu animated fadeInDown">
                             <li class="profile-img">
                                 <img src="../img/profile/picjumbo.com_HNCK4153_resize.jpg" class="profile-img">
                             </li>
                             <li>
                                 <div class="profile-info">
-                                    <h4 class="username">Admin</h4>
-                                    <p>Admin@email.com</p>
+                                    <h4 class="username">Emily Hart</h4>
+                                    <p>emily_hart@email.com</p>
                                     <div class="btn-group margin-bottom-2x" role="group">
                                         <button type="button" class="btn btn-default"><i class="fa fa-user"></i> Profile</button>
                                         <button type="button" class="btn btn-default"><i class="fa fa-sign-out"></i> Logout</button>
@@ -84,16 +85,14 @@
                 </ul>
             </div>
         </nav>
-        {{--以上是上方导航栏  --}}
 
-        {{-- 以下是左侧导航栏容 --}}
         <div class="side-menu sidebar-inverse">
             <nav class="navbar navbar-default" role="navigation">
                 <div class="side-menu-container">
                     <div class="navbar-header">
                         <a class="navbar-brand" href="#">
                             <div class="icon fa fa-paper-plane"></div>
-                            <div class="title">GZID Admin V.1</div>
+                            <div class="title">Flat Admin V.2</div>
                         </a>
                         <button type="button" class="navbar-expand-toggle pull-right visible-xs">
                             <i class="fa fa-times icon"></i>
@@ -102,12 +101,12 @@
                     <ul class="nav navbar-nav">
                         <li class="active">
                             <a href="index.html">
-                                <span class="icon fa fa-tachometer"></span><span class="title">控制台</span>
+                                <span class="icon fa fa-tachometer"></span><span class="title">Dashboard</span>
                             </a>
                         </li>
                         <li class="panel panel-default dropdown">
                             <a data-toggle="collapse" href="#dropdown-element">
-                                <span class="icon fa fa-desktop"></span><span class="title">UI工具箱</span>
+                                <span class="icon fa fa-desktop"></span><span class="title">UI Kits</span>
                             </a>
                             <!-- Dropdown level 1 -->
                             <div id="dropdown-element" class="panel-collapse collapse">
@@ -141,7 +140,7 @@
                         </li>
                         <li class="panel panel-default dropdown">
                             <a data-toggle="collapse" href="#dropdown-table">
-                                <span class="icon fa fa-table"></span><span class="title">日志</span>
+                                <span class="icon fa fa-table"></span><span class="title">Table</span>
                             </a>
                             <!-- Dropdown level 1 -->
                             <div id="dropdown-table" class="panel-collapse collapse">
@@ -157,7 +156,7 @@
                         </li>
                         <li class="panel panel-default dropdown">
                             <a data-toggle="collapse" href="#dropdown-form">
-                                <span class="icon fa fa-file-text-o"></span><span class="title">表格</span>
+                                <span class="icon fa fa-file-text-o"></span><span class="title">Form</span>
                             </a>
                             <!-- Dropdown level 1 -->
                             <div id="dropdown-form" class="panel-collapse collapse">
@@ -173,7 +172,7 @@
                         <!-- Dropdown-->
                         <li class="panel panel-default dropdown">
                             <a data-toggle="collapse" href="#component-example">
-                                <span class="icon fa fa-cubes"></span><span class="title">组件</span>
+                                <span class="icon fa fa-cubes"></span><span class="title">Components</span>
                             </a>
                             <!-- Dropdown level 1 -->
                             <div id="component-example" class="panel-collapse collapse">
@@ -190,7 +189,7 @@
                         <!-- Dropdown-->
                         <li class="panel panel-default dropdown">
                             <a data-toggle="collapse" href="#dropdown-example">
-                                <span class="icon fa fa-slack"></span><span class="title">精选实例</span>
+                                <span class="icon fa fa-slack"></span><span class="title">Page Example</span>
                             </a>
                             <!-- Dropdown level 1 -->
                             <div id="dropdown-example" class="panel-collapse collapse">
@@ -207,7 +206,7 @@
                         <!-- Dropdown-->
                         <li class="panel panel-default dropdown">
                             <a data-toggle="collapse" href="#dropdown-icon">
-                                <span class="icon fa fa-archive"></span><span class="title">图标</span>
+                                <span class="icon fa fa-archive"></span><span class="title">Icons</span>
                             </a>
                             <!-- Dropdown level 1 -->
                             <div id="dropdown-icon" class="panel-collapse collapse">
@@ -223,38 +222,28 @@
                         </li>
                         <li>
                             <a href="license.html">
-                                <span class="icon fa fa-thumbs-o-up"></span><span class="title">许可证</span>
+                                <span class="icon fa fa-thumbs-o-up"></span><span class="title">License</span>
                             </a>
                         </li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
             </nav>
-        </div>           
+        </div>
+
         
         <!-- Main Content -->
         <div class="container-fluid">
             <div class="side-body padding-top">
-                {{-- 动态显示红黄绿蓝 --}}
                 <div class="row">
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <a href="#">
                             <div class="card red summary-inline">
                                 <div class="card-body">
-                                    <i class="icon fa fa-circle-o fa-4x"></i>
+                                    <i class="icon fa fa-inbox fa-4x"></i>
                                     <div class="content">
-                                        <div class="title" id="sermsg">
-                                            <script>
-                                        $(function(){
-                                            shuaxinserial();
-                                            setInterval(function()
-                                                {
-                                                    shuaxinserial();
-                                                }, 3000);
-                                        }); 
-                                            </script> 
-                                        </div>
-                                        <div class="sub-title">串口数据</div>
+                                        <div class="title">50</div>
+                                        <div class="sub-title">New Mails</div>
                                     </div>
                                     <div class="clear-both"></div>
                                 </div>
@@ -265,20 +254,10 @@
                         <a href="#">
                             <div class="card yellow summary-inline">
                                 <div class="card-body">
-                                    <i class="icon fa fa-ellipsis-h fa-4x"></i>
+                                    <i class="icon fa fa-comments fa-4x"></i>
                                     <div class="content">
-                                        <div class="title" id="temmsg">
-                                                <script>
-                                                    $(function(){
-                                                            shuaxin_tem();
-                                                            setInterval(function()
-                                                                {
-                                                                    shuaxin_tem();
-                                                                }, 3750);
-                                                        });       
-                                                </script>  
-                                        </div>
-                                        <div class="sub-title">室内温度</div>
+                                        <div class="title">23</div>
+                                        <div class="sub-title">New Message</div>
                                     </div>
                                     <div class="clear-both"></div>
                                 </div>
@@ -289,20 +268,10 @@
                         <a href="#">
                             <div class="card green summary-inline">
                                 <div class="card-body">
-                                    <i class="icon fa fa-ellipsis-v fa-4x"></i>
+                                    <i class="icon fa fa-tags fa-4x"></i>
                                     <div class="content">
-                                        <div class="title" id ="hummsg">
-                                                <script>
-                                                        $(function(){
-                                                                shuaxin_hum();
-                                                                setInterval(function()
-                                                                    {
-                                                                        shuaxin_hum();
-                                                                    }, 3500);
-                                                            });     
-                                                        </script> 
-                                        </div>
-                                        <div class="sub-title">室内湿度</div>
+                                        <div class="title">280</div>
+                                        <div class="sub-title">Product View</div>
                                     </div>
                                     <div class="clear-both"></div>
                                 </div>
@@ -315,8 +284,8 @@
                                 <div class="card-body">
                                     <i class="icon fa fa-share-alt fa-4x"></i>
                                     <div class="content">
-                                        <div class="title">3</div>
-                                        <div class="sub-title">告警次数</div>
+                                        <div class="title">16</div>
+                                        <div class="sub-title">Share</div>
                                     </div>
                                     <div class="clear-both"></div>
                                 </div>
@@ -324,118 +293,130 @@
                         </a>
                     </div>
                 </div>
-
-                {{-- 红黄绿蓝下边的其他表格 --}}
                 <div class="row  no-margin-bottom">
-                    {{-- 以下为左边动态表格内容 --}}
                     <div class="col-sm-6 col-xs-12">
                         <div class="row">
                             <div class="col-xs-12">
                                 <div class="card primary">
-                                    {{-- <div class="card-jumbotron no-padding"> --}}
-                                        <div id="main" style="width: 600px;height:400px;"></div>
-                                        <script src="../js/echarts.common.min.js"></script>
-                                        <script src="../js/chalk.js"></script>
-                                            <script>
-                                                $(function(){
-                                                initAjax();
-                                                setInterval(function(){
-                                                    initAjax();
-                                                }, 1000);
-                                                }); 
-                                            </script>
-                                    {{-- </div>  --}}
+                                    <div class="card-jumbotron no-padding">
+                                        <canvas id="jumbotron-line-chart" class="chart no-padding"></canvas>
+                                    </div>
                                     <div class="card-body half-padding">
-                                        <h4 class="float-left no-margin font-weight-300">温湿度变化</h4>
-                                        <h2 class="float-right no-margin font-weight-300"></h2>
+                                        <h4 class="float-left no-margin font-weight-300">Profits</h4>
+                                        <h2 class="float-right no-margin font-weight-300">$3200</h2>
                                         <div class="clear-both"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    {{-- 右边4个 --}}
-                    <div class="col-sm-6 col-xs-12">
-                            <div class="row">
-                            {{-- switch开关 --}}
-                                    <div class="col-md-6 col-sm-12">
-                                        <div class="card primary">
-                                            <input name="status" type="checkbox" >
-                                                <script type="text/javascript">
-                                                    $("[name='status']").bootstrapSwitch({ 
-                                                        onText:"照明",         
-                                                        offText:"熄灭",        
-                                                        onColor:"success",         
-                                                        offColor:"info",         
-                                                        size:"large",         
-                                                        onSwitchChange:function(event,state){             
-                                                            if(state==true){                 
-                                                                $(this).val("1");                 
-                                                                console.log("开启");
-                                                                // 利用控制器处理
-                                                                $(function(){lightup_control();
-                                                                });  
-                                                                }
-                                                            else{                 
-                                                                $(this).val("2");              
-                                                                console.log("关闭");
-                                                                $(function(){lightdown_control();
-                                                                });                
-                                                                }                                                                
-                                                            }     
-                                                        });
-                                                </script>                          
-                                            <div class="card-body half-padding">
-                                                <h4 class="float-left no-margin font-weight-300">LED开关</h4>
-                                                <div class="clear-both"></div>
-                                            </div>
-                                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="thumbnail no-margin-bottom">
+                                    <img src="../img/thumbnails/picjumbo.com_IMG_4566.jpg" class="img-responsive">
+                                    <div class="caption">
+                                        <h3 id="thumbnail-label">Thumbnail label<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
+                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
                                     </div>
-        
-                                    <div class="col-md-6 col-sm-12">
-                                        <div class="card primary">
-                                            <div class="card-jumbotron no-padding">
-                                                <canvas id="jumbotron-line-chart" class="chart no-padding"></canvas>
-                                            </div>
-                                            <div class="card-body half-padding">
-                                                <h4 class="float-left no-margin font-weight-300">Pages view</h4>
-                                                <div class="clear-both"></div>
-                                            </div>
-                                        </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="thumbnail no-margin-bottom">
+                                    <img src="../img/thumbnails/picjumbo.com_IMG_3241.jpg" class="img-responsive">
+                                    <div class="caption">
+                                        <h3 id="thumbnail-label">Thumbnail label<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
+                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                        <p><a href="#" class="btn btn-success" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
                                     </div>
-        
-                                    <div class="col-md-6 col-sm-12">
-                                        <div class="card primary">
-                                            <div class="card-jumbotron no-padding">
-                                                <canvas id="jumbotron-line-chart" class="chart no-padding"></canvas>
-                                            </div>
-                                            <div class="card-body half-padding">
-                                                <h4 class="float-left no-margin font-weight-300">摄像头1</h4>
-                                                <div class="clear-both"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-        
-                                    <div class="col-md-6 col-sm-12">
-                                            <div class="card primary">
-                                                <div class="card-jumbotron no-padding">
-                                                    <canvas id="jumbotron-line-chart" class="chart no-padding"></canvas>
-                                                </div>
-                                                <div class="card-body half-padding">
-                                                    <h4 class="float-left no-margin font-weight-300">摄像头2</h4>
-                                                    <div class="clear-both"></div>
-                                                </div>
-                                            </div>
-                                    </div>
-        
+                                </div>
                             </div>
                         </div>
-                
+                    </div>
+                    <div class="col-sm-6 col-xs-12">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="card primary">
+                                    <div class="card-jumbotron no-padding">
+                                        <canvas id="jumbotron-bar-chart" class="chart no-padding"></canvas>
+                                    </div>
+                                    <div class="card-body half-padding">
+                                        <h4 class="float-left no-margin font-weight-300">Orders</h4>
+                                        <div class="clear-both"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="card primary">
+                                    <div class="card-jumbotron no-padding">
+                                        <canvas id="jumbotron-line-2-chart" class="chart no-padding"></canvas>
+                                    </div>
+                                    <div class="card-body half-padding">
+                                        <h4 class="float-left no-margin font-weight-300">Pages view</h4>
+                                        <div class="clear-both"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-success">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    <div class="title"><i class="fa fa-comments-o"></i> Last Message</div>
+                                </div>
+                                <div class="clear-both"></div>
+                            </div>
+                            <div class="card-body no-padding">
+                                <ul class="message-list">
+                                    <a href="#">
+                                        <li>
+                                            <img src="../img/profile/profile-1.jpg" class="profile-img pull-left">
+                                            <div class="message-block">
+                                                <div><span class="username">Tui2Tone</span> <span class="message-datetime">12 min ago</span>
+                                                </div>
+                                                <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</div>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <a href="#">
+                                        <li>
+                                            <img src="../img/profile/profile-1.jpg" class="profile-img pull-left">
+                                            <div class="message-block">
+                                                <div><span class="username">Tui2Tone</span> <span class="message-datetime">15 min ago</span>
+                                                </div>
+                                                <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</div>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <a href="#">
+                                        <li>
+                                            <img src="../img/profile/profile-1.jpg" class="profile-img pull-left">
+                                            <div class="message-block">
+                                                <div><span class="username">Tui2Tone</span> <span class="message-datetime">2 hour ago</span>
+                                                </div>
+                                                <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</div>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <a href="#">
+                                        <li>
+                                            <img src="../img/profile/profile-1.jpg" class="profile-img pull-left">
+                                            <div class="message-block">
+                                                <div><span class="username">Tui2Tone</span> <span class="message-datetime">1 day ago</span>
+                                                </div>
+                                                <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</div>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <a href="#" id="message-load-more">
+                                        <li class="text-center load-more">
+                                            <i class="fa fa-refresh"></i> load more..
+                                        </li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>        
+            </div>
         </div>
- 
-         
-@stop
+    </div>
+ @stop

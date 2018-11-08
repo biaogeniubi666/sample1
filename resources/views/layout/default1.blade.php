@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+    <head>
       <title>GZID Admin V.1 - GZID IOT666</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -24,34 +24,38 @@
       <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
       <script type="text/javascript" src="../lib/js/bootstrap-switch.min.js"></script>
       <script type="text/javascript" src="../js/data.js"></script>
-  </head>
-    <body>
-
-        @yield('content')
-
+    </head>
   
-      <div>
-          <!-- Javascript Libs -->
-          <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-          <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
-          <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
-          <script type="text/javascript" src="../lib/js/bootstrap.min.js"></script>
-          <script type="text/javascript" src="../lib/js/Chart.min.js"></script>
-          <script type="text/javascript" src="../lib/js/bootstrap-switch.min.js"></script>
-          <script type="text/javascript" src="../lib/js/jquery.matchHeight-min.js"></script>
-          <script type="text/javascript" src="../lib/js/jquery.dataTables.min.js"></script>
-          <script type="text/javascript" src="../lib/js/dataTables.bootstrap.min.js"></script>
-          <script type="text/javascript" src="../lib/js/select2.full.min.js"></script>
-          <script type="text/javascript" src="../lib/js/ace/ace.js"></script>
-          <script type="text/javascript" src="../lib/js/ace/mode-html.js"></script>
-          <script type="text/javascript" src="../lib/js/ace/theme-github.js"></script>
-      
-          <!-- Javascript -->
-          <script type="text/javascript" src="../js/app.js"></script>
-          <script type="text/javascript" src="../js/index.js"></script>
-          <script type="text/javascript" src="../js/data.js"></script>
-          <script src="../js/echarts.common.min.js"></script>
-          <script src="../js/echart.js"></script>
-          <script src="../js/chalk.js"></script>
-        </body>					
+    <body class="flat-blue">
+        <div class="app-container">
+        @yield('content')
+        <footer class="app-footer">
+                    <div class="wrapper">
+                        </div>
+        </footer>
+        <div>
+            <!-- Javascript Libs -->
+            <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+            <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+            <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
+            <script type="text/javascript" src="../lib/js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="../lib/js/Chart.min.js"></script>
+            <script type="text/javascript" src="../lib/js/bootstrap-switch.min.js"></script>
+            <script type="text/javascript" src="../lib/js/jquery.matchHeight-min.js"></script>
+            <script type="text/javascript" src="../lib/js/jquery.dataTables.min.js"></script>
+            <script type="text/javascript" src="../lib/js/dataTables.bootstrap.min.js"></script>
+            <script type="text/javascript" src="../lib/js/select2.full.min.js"></script>
+            <script type="text/javascript" src="../lib/js/ace/ace.js"></script>
+            <script type="text/javascript" src="../lib/js/ace/mode-html.js"></script>
+            <script type="text/javascript" src="../lib/js/ace/theme-github.js"></script>
+        
+            <!-- Javascript -->
+            <script type="text/javascript" src="../js/app.js"></script>
+            <script type="text/javascript" src="../js/index.js"></script>
+            <script type="text/javascript" src="../js/data.js"></script>
+            <script src="../js/echarts.common.min.js"></script>
+            <script src="../js/echart.js"></script>
+            <script src="../js/chalk.js"></script>
+        
+    </body>	    				
 </html>
