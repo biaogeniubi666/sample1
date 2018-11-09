@@ -45,7 +45,7 @@ class SessionsController extends Controller
         return redirect('login');
     }
 
-    public function __construct() //登录动作create()只允许未登录用户使用，注册动作限制在另一个控制器内
+    public function __construct() //登录动作login()只允许未登录用户使用，注册动作限制在另一个控制器内
     {
         $this->middleware('guest', [
             'only' => ['login']

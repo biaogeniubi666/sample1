@@ -11,6 +11,7 @@
             {{-- {{ $user->name }} - {{ $user->email }} --}}
             @include('shared._user_info', ['user' => $user])
             {{-- 通过给 @include 方法传参，将用户数据以关联数组的形式传送到 _user_info 局部视图上。 --}}
+            {{route('home')}}
           </section>    
         </div>
     </div>

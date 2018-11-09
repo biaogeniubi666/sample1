@@ -11,7 +11,8 @@
 |
 */
 //  Laravel 中，我们可以通过在路由后面链式调用 name 方法来为路由指定名称
-Route::get('/', 'StaticPagesController@home')->name('home');
+Route::get('/', 'UsersController@home')->name('home'); //主页控制台
+
 Route::get('/help', 'StaticPagesController@help')->name('help');
 Route::get('/about', 'StaticPagesController@about')->name('about');
 

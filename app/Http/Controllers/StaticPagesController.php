@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 
 class StaticPagesController extends Controller
 {
-    public function home()
-    {
-        return view('admin/index');
-    }
+    // public function home()
+    // {
+    //     return view('admin.index');
+    // }
 
     public function help()
     {

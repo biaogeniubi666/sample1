@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>GZID niubi</title>
+      <title>@yield('title', 'Sample IOT') - GZID IOT</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <!-- Fonts -->
@@ -58,6 +58,6 @@
                         <script src="/js/echart.js"></script>
                         <script src="/js/chalk.js"></script>
                         <script src="/js/app.js"></script>
-                    </div><!-- JS文件导入-->
+                    <!-- JS文件导入-->
     </body>	    				
 </html>

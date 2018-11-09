@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 // UsersController 包含用户的注册、用户个人中心、已登录用户信息修改等相关业务内容
 class UsersController extends Controller
 {
+    public function home()
+    {
+        return view('admin.index');
+    }
+
     public function signup()  // 注册界面跳转
     {
         return view('users.signup');
@@ -100,7 +105,7 @@ class UsersController extends Controller
         //  Auth 中间件在过滤指定动作时，如该用户未通过身份验证（未登录用户），默认将会被重定向到 /login 登录页面。
     
         $this->middleware('guest', [
-            'only' => ['create']
+            'only' => ['signup']
             // guest 选项用于指定一些只允许未登录用户访问的动作
             //'only' => ['create']只让未登录用户访问注册'create'动作。登录动作限制在另一个控制器内。
             // 已登录用户访问create时，会自动跳转到 Laravel 默认指定的页面 /home
