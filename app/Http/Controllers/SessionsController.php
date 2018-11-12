@@ -25,7 +25,8 @@ class SessionsController extends Controller
         // 该用户存在于数据库，且邮箱和密码相符合}
         // 登录成功后的相关操作
         session()->flash('success', '欢迎回来！');
-        return redirect()->intended(route('users.show',[Auth::user()]));
+        // return redirect()->intended(route('users.show',[Auth::user()]));
+        return redirect()->intended('/');
         // Auth::user() 方法来获取 当前登录用户 的信息，并将数据传送给路由
         // intended方法可将页面重定向到上一次请求尝试访问的页面上，并接收一个默认跳转地址参数，当上一次请求记录为空时，跳转到默认地址上。
         

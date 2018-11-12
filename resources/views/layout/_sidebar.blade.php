@@ -12,7 +12,7 @@
             </div>
             <ul class="nav navbar-nav">
                 <li class="active">
-                    <a href="index.html">
+                    <a href="{{ route('signup') }}">
                         <span class="icon fa fa-tachometer"></span><span class="title">控制台</span>
                     </a>
                 </li>
