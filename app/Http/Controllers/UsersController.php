@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
-use App\Models\User;  
-// 加上用户模型文件路径，才能找到User
-use Illuminate\Http\Request;
-// UsersController 包含用户的注册、用户个人中心、已登录用户信息修改等相关业务内容
+use Auth; // 使用用户验证中间件
+use App\Models\User;   // 加上用户模型文件路径，才能找到User
+use Illuminate\Http\Request; // UsersController 包含用户的注册、用户个人中心、已登录用户信息修改等相关业务内容
 class UsersController extends Controller
 {
     public function home()
@@ -41,7 +40,8 @@ class UsersController extends Controller
             'email' => $request->email,
             'password' => bcrypt($request->password),
         ]);
-
+        Auth::login($user);
+        // 注册后自动登录
         session()->flash('success', '欢迎，您将在这里开启一段新的旅程~');
         // 临时保存用户数据的方法 - 会话（Session）
         // session() 方法来访问会话实例，flash方法为存入一条缓存的数据，在下一次请求内生效。
