@@ -6,6 +6,8 @@ use App\Http\Requests;
 use Auth; // 使用用户验证中间件
 use App\Models\User;   // 加上用户模型文件路径，才能找到User
 use Illuminate\Http\Request; // UsersController 包含用户的注册、用户个人中心、已登录用户信息修改等相关业务内容
+use Mail; //使用邮件中间件
+
 class UsersController extends Controller
 {
     public function home()
@@ -40,15 +42,20 @@ class UsersController extends Controller
             'email' => $request->email,
             'password' => bcrypt($request->password),
         ]);
+
+        $this->sendEmailConfirmationTo($user);
+        session()->flash('success', '验证邮件已发送到你的注册邮箱上，请注意查收。');
+        return redirect()->back();
+        /*注册后自动登录替换为上面的内容，sendEmailConfirmationTo方法，用于发送邮件给指定用户。我们会在用户注册成功之后调用该方法来发送激活邮件
         Auth::login($user);
         // 注册后自动登录
         session()->flash('success', '欢迎，您将在这里开启一段新的旅程~');
         // 临时保存用户数据的方法 - 会话（Session）
         // session() 方法来访问会话实例，flash方法为存入一条缓存的数据，在下一次请求内生效。
-        // 之后我们可以使用 session()->get('success') 通过键名来取出对应会话中的数据，取出的结果为 欢迎，您将在这里开启一段新的旅程~。
-        
+        // 之后我们可以使用 session()->get('success') 通过键名来取出对应会话中的数据，取出的结果为 欢迎，您将在这里开启一段新的旅程~。  
         return redirect()->route('users.show', [$user]);
        // $user 是 User 模型对象的实例。route() 方法会自动获取 Model 的主键，也就是数据表 users 的主键 id 
+        */
     }
 
     public function edit(User $user)  // 编辑资料页面验证和跳转
@@ -96,7 +103,7 @@ class UsersController extends Controller
     public function __construct()   //在用户的注册、用户个人中心、已登录用户信息修改中使用
     {
         $this->middleware('auth', [     //构建中间件‘auth’，并定义相应的动作，用于其他方法中       
-            'except' => ['show', 'signup', 'store', 'index']
+            'except' => ['show', 'signup', 'store', 'index','confirmEmail']
         ]);
         // Laravel 提供身份验证（Auth）中间件来过滤未登录用户的 edit, update 动作。
         // __construct()是PHP的构造器方法，用于创建一个类对象，类似于PYTHON的类。
@@ -134,6 +141,37 @@ class UsersController extends Controller
         // 查找到指定用户之后再调用 Eloquent 模型提供的 delete 方法对用户资源进行删除，
         // 成功删除后在页面顶部进行消息提示。最后将用户重定向到上一次进行删除操作的页面，
         // 即用户列表页。
+    }
+
+    protected function sendEmailConfirmationTo($user)
+    {
+        $view = 'emails.confirm';
+        $data = compact('user');
+        $from = 'aufree@yousails.com';
+        $name = 'Aufree';
+        $to = $user->email;
+        $subject = "感谢注册 Sample 应用！请确认你的邮箱。";
+
+        Mail::send($view, $data, function ($message) use ($from, $name, $to, $subject) {
+            $message->from($from, $name)->to($to)->subject($subject);
+        });
+    }
+
+    public function confirmEmail($token)
+    {
+        $user = User::where('activation_token', $token)->firstOrFail();
+        //confirmEmail 中，我们会先根据路由传送过来的 activation_token 参数从数据库中查找相对应的用户
+        // Eloquent 的 where 方法接收两个参数，第一个参数为要进行查找的字段名称，第二个参数为对应的值，查询结果返回的是一个数组
+        // 使用 firstOrFail 方法来取出第一个用户，在查询不到指定用户时将返回一个 404 响应
+        $user->activated = true;
+        $user->activation_token = null;
+        $user->save();
+        // 在查询到用户信息后，我们会将该用户的激活状态改为 true，激活令牌设置为空
+        
+        Auth::login($user);
+        session()->flash('success', '恭喜你，激活成功！');
+        return redirect()->route('users.show', [$user]);
+        // 最后将激活成功的用户进行登录，并在页面上显示消息提示和重定向到个人页面
     }
 
 

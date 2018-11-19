@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+@extends('layout.default2')
+@section('title', '注册')
+
+@section('content')
+
+{{-- <!DOCTYPE html>
 <html>
 
 <head>
@@ -27,53 +32,54 @@
             <div>
                 <div class="login-form row">
 
-                    {{-- LOGO --}}
+                    {{-- LOGO 
                     <div class="col-sm-12 text-center login-header">
                         <i class="login-logo fa fa-connectdevelop fa-5x"></i>
                         <h4 class="login-title">GZID物联网平台注册</h4>
-                    </div>
+                    </div> --}}
 
-                    <div class="col-sm-12">
-                        {{-- 注册页面盒子 --}}
-                        <div class="login-body">
-                            <div class="progress hidden" id="login-progress">
-                                <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                                    Sign Up...
-                                </div>
-                            </div>                         
-                        <form method="POST" action="{{ route('users.store') }}">
-                                    {{ csrf_field() }}
-                                    
-                                    <div class="form-group">
-                                      <label for="name">名称：</label>
-                                      <input type="text" name="name" class="form-control" value="{{ old('name') }}">
-                                    </div>
-                          
-                                    <div class="form-group">
-                                      <label for="email">邮箱：</label>
-                                      <input type="text" name="email" class="form-control" value="{{ old('email') }}">
-                                    </div>
-                          
-                                    <div class="form-group">
-                                      <label for="password">密码：</label>
-                                      <input type="password" name="password" class="form-control" value="{{ old('password') }}">
-                                    </div>
-                          
-                                    <div class="form-group">
-                                      <label for="password_confirmation">确认密码：</label>
-                                      <input type="password" name="password_confirmation" class="form-control" value="{{ old('password_confirmation') }}">
-                                    </div>
-                          
-                                    <button type="submit" class="btn btn-primary">注册</button>
-                            </form>
-                        </div>  
-                    </div>
+<div class="col-sm-12">
+    {{-- 注册页面盒子 --}}
+    <div class="login-body">
+        <div class="progress hidden" id="login-progress">
+            <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                Sign Up...
+            </div>
+        </div>                         
+        <form method="POST" action="{{ route('users.store') }}">
+                {{ csrf_field() }}
+                
+                <div class="form-group">
+                    <label for="name">名称：</label>
+                    <input type="text" name="name" class="form-control" value="{{ old('name') }}">
                 </div>
+        
+                <div class="form-group">
+                    <label for="email">邮箱：</label>
+                    <input type="text" name="email" class="form-control" value="{{ old('email') }}">
+                </div>
+        
+                <div class="form-group">
+                    <label for="password">密码：</label>
+                    <input type="password" name="password" class="form-control" value="{{ old('password') }}">
+                </div>
+        
+                <div class="form-group">
+                    <label for="password_confirmation">确认密码：</label>
+                    <input type="password" name="password_confirmation" class="form-control" value="{{ old('password_confirmation') }}">
+                </div>
+        
+                <button type="submit" class="btn btn-primary">注册</button>
+        </form>
+    </div>  
+</div>
+@stop
+                {{-- </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Javascript Libs -->
-    <script type="text/javascript" src="../../lib/js/jquery.min.js"></script>
+    {{-- <script type="text/javascript" src="../../lib/js/jquery.min.js"></script>
     <script type="text/javascript" src="../../lib/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../lib/js/Chart.min.js"></script>
     <script type="text/javascript" src="../../lib/js/bootstrap-switch.min.js"></script>
@@ -89,4 +95,4 @@
     <script type="text/javascript" src="../../js/app.js"></script>
 </body>
 
-</html>
+</html> --}}

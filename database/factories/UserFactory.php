@@ -24,6 +24,8 @@ $factory->define(App\Models\User::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->safeEmail,
+        'is_admin' => false,
+        'activated' => true,
         'password' => $password ?: $password = bcrypt('secret'), // secret
         // 表达式 expr1 ?: expr3 --> 在 expr1 求值为 TRUE 时返回 expr1，否则返回 expr3
         // 有密码就用密码，没密码就默认secret为初始密码

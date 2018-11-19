@@ -26,8 +26,9 @@ class UsersTableSeeder extends Seeder
         $user->name = 'Aufree';
         $user->email = 'aufree@yousails.com';
         $user->password = bcrypt('password');
-        $user->is_admin = true;
+        
         // 设置ID为1的用户为管理员
+        $user->activated = true; // 设为激活状态，即不需要进行邮件认证？
         $user->save();
         
         //创建指定用户并设为管理员，保存于ID1

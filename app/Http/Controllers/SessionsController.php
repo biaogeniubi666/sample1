@@ -9,7 +9,12 @@ class SessionsController extends Controller
 {
     public function login()   // 登录页面跳转
     {
-        return view('sessions.login');
+        if(Auth::check()){
+            return view('admin.index');
+        } else {
+            return view('sessions.login');
+        }
+            
     }
 
     public function store(Request $request) //登录信息验证和处理
@@ -23,14 +28,22 @@ class SessionsController extends Controller
         //Auth 的 attempt 方法可以让我们很方便的完成用户的身份认证操作，但要在开头使用use Auth;
         // if (Auth::attempt(['email' => $email, 'password' => $password])) {
         // 该用户存在于数据库，且邮箱和密码相符合}
-        // 登录成功后的相关操作
-        session()->flash('success', '欢迎回来！');
-        // return redirect()->intended(route('users.show',[Auth::user()]));
-        return redirect()->intended('/');
-        // Auth::user() 方法来获取 当前登录用户 的信息，并将数据传送给路由
-        // intended方法可将页面重定向到上一次请求尝试访问的页面上，并接收一个默认跳转地址参数，当上一次请求记录为空时，跳转到默认地址上。
-        
-       } else {
+            if(Auth::user()->activated) {
+            // 验证用户是否为已激活状态，如果是，才可以登录    
+                session()->flash('success', '欢迎回来！'); // 登录成功后的相关操作
+
+                return redirect()->intended('/');
+                // return redirect()->intended(route('users.show',[Auth::user()]));
+                // Auth::user() 方法来获取 当前登录用户 的信息，并将数据传送给路由
+                // intended方法可将页面重定向到上一次请求尝试访问的页面上，并接收一个默认跳转地址参数，当上一次请求记录为空时，跳转到默认地址上。
+            } else {
+                // 验证用户是否为已激活状态，如果部是，强制登出并返回登录界面    
+                Auth::logout();
+                session()->flash('warning', '你的账号未激活，请检查邮箱中的注册邮件进行激活。');
+                return redirect()->back();
+            }
+
+        } else {
            // 登录失败后的相关操作
            session()->flash('danger', '很抱歉，您的邮箱和密码不匹配');
            return redirect()->back();
@@ -52,4 +65,7 @@ class SessionsController extends Controller
             'only' => ['login']
         ]);
     }
+
+
+
 }
